@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace _5_gyak
 {
@@ -31,7 +32,14 @@ namespace _5_gyak
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
 
-            InitializeComponent();
+            var xml = new XmlDocument();
+            xml.LoadXml(result);
+            foreach (XmlElement element in xml.DocumentElement)
+            {
+                
+                var rate = new RsteData();
+                Rate.Add(rate);
+                InitializeComponent();
         }
     }
 }
