@@ -26,5 +26,6 @@ namespace hetes
         }
     
         public virtual DbSet<Tick> Tick { get; set; }
+        public object Ticks { get; internal set; }
     }
 }
