@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Entities
 {
-    class BirthProbability
+    public class BirthProbability
     {
-        public int kor { get; set; }
+        public int Age { get; set; }
         public int NbrOfChildren { get; set; }
         public double IsBirth { get; set; }
     }
